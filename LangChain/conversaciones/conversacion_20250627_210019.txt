@@ -1,0 +1,24 @@
+Turno 1:
+Tú: Hola
+Bot: ¡Hola! Gracias por ponerte en contacto con Alloxentric. Para poder ayudarte de manera más efectiva, me gustaría saber un poco más sobre ti y tu empresa. ¿Podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: Quetal
+Bot: ¡Hola! Gracias por contactarnos. Para poder ayudarte de manera más efectiva, ¿podrías proporcionarnos tu nombre y correo electrónico?
+
+Turno 3:
+Tú: no
+Bot: Para poder ayudarte de manera efectiva, me gustaría saber un poco más sobre ti y tu empresa. ¿Podrías proporcionarme tu nombre y dirección de correo electrónico?
+
+Turno 4:
+Tú: salir
+Bot: Parece que deseas salir de la conversación. Para poder ayudarte de manera efectiva, primero necesito saber un poco más sobre ti. ¿Podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 5:
+Tú: de que trata alloxentric
+Bot: Alloxentric es una empresa que ofrece servicios de atención al cliente y cobranza para startups y scaleups, utilizando inteligencia artificial para mejorar la calidad y la eficiencia de los procesos. Nuestros servicios incluyen bots de voz y texto, agentes humanos capacitados y una plataforma de comunicación omnicanal que permite la interacción con los clientes a través de diferentes canales.
+
+Nuestras soluciones están diseñadas para ayudar a las empresas a reducir costos, mejorar la satisfacción del cliente y aumentar la eficiencia en la gestión de la cobranza. Nuestros productos y servicios están orientados a satisfacer las necesidades de las empresas que buscan mejorar su relación con los clientes y optimizar sus procesos.
+
+¿Podrías proporcionarme tu nombre y correo electrónico para que pueda continuar con la conversación de manera más personalizada?
+

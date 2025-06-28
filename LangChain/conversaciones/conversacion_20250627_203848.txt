@@ -1,0 +1,30 @@
+Turno 1:
+Tú: Hola
+Bot: ¿Qué tal? Bienvenido a Alloxentric. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: No, no quiero
+Bot: Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 3:
+Tú: de que trata alloxentric
+Bot: Alloxentric es una empresa que ofrece una plataforma de Comunicación Omnicanal que permite la interacción con los clientes a través de diferentes canales, como voz y texto, utilizando tecnologías de Inteligencia Artificial (IA). Sus soluciones incluyen bots de voz y texto que pueden mantener conversaciones estructuradas y semiestructuradas con los clientes, permitiendo labores como agendamiento, cobranza, precalificación de ventas, recordatorios, encuestas, ventas y otros.
+
+Para obtener más información y discutir cómo podemos ayudarte, por favor proporciona tu nombre y correo electrónico.
+
+Turno 4:
+Tú: Jairo vera 
+Bot: Hola Jairo, gracias por proporcionarnos tu nombre. Para poder continuar con la conversación, ¿podrías proporcionarnos tu correo electrónico?
+
+Turno 5:
+Tú: jairo.vera@tupu.com
+Bot: ¿Cuál es el nombre de la empresa para la que trabaja, Jairo?
+
+Turno 6:
+Tú: CASONA!(=
+Bot: CASONA se dedica a una actividad que requiere información adicional para entender mejor su enfoque. Sin embargo, puedo proporcionarte información general sobre cómo Alloxentric podría ayudar a empresas como CASONA.
+
+Alloxentric ofrece soluciones basadas en Inteligencia Artificial para mejorar la retención de clientes y optimizar el servicio al cliente. Nuestro modelo de IA analiza el comportamiento de los clientes para predecir el riesgo de abandono y sugiere acciones para minimizarlo.
+
+¿Podrías proporcionarme más detalles sobre la actividad principal de CASONA para que pueda entender mejor cómo podemos ayudar?
+
