@@ -1,8 +1,8 @@
 # Imagen base con Python
-FROM python:3.11
+FROM python:3.11.8-slim-bullseye
 
 # Actualizar paquetes del sistema para reducir vulnerabilidades
-RUN apt-get update && apt-get upgrade -y && apt-get clean
+RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y --no-install-recommends gcc && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Crear directorio de trabajo
 WORKDIR /app
