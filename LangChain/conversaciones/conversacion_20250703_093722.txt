@@ -1,0 +1,64 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Gracias por contactarnos. Soy un asistente de Alloxentric. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: si me llamo javier nanco mi correo es jnanco@gmail.com
+Bot: Hola, gracias por proporcionarnos tu nombre y correo electrónico. Nos has dicho que te llamas Javier Nanco y tu correo es jnanco@gmail.com. ¿Podrías decirnos el nombre de tu empresa para que podamos entender mejor tus necesidades y ofrecerte la información más relevante de Alloxentric?
+
+Turno 3:
+Tú: me indica primero los servicios de alloxentric
+Bot: En Alloxentric, ofrecemos servicios de Inteligencia Artificial (IA) para mejorar la experiencia del cliente y optimizar procesos en diversas industrias, incluyendo seguros de vida y telecomunicaciones. Nuestros servicios incluyen:
+
+1. **Mesa de Ayuda: Agentes + IA**, que reduce hasta un 40% el número de tickets que llegan a los agentes humanos.
+2. **Chatbots de texto por canales**, que funcionan en múltiples plataformas de mensajería como WhatsApp, SMS, Telegram, y otros, y se utilizan para confirmar agendamientos, coordinar entregas, vender productos y servicios, preliquidación de seguros, y soporte técnico.
+3. **Plataforma de Comunicación Omnicanal**, que integra bots y agentes humanos para labores como cobranza, logística, ventas, y más, con el objetivo de disminuir el churn y mejorar la rentabilidad.
+
+Nuestros servicios están diseñados para startups y scaleups que buscan mejorar su servicio al cliente, medir la calidad de manera integral e integrar gradualmente la automatización para manejar los costos.
+
+¿Podrías proporcionarme tu nombre y correo electrónico para que pueda brindarte más información personalizada?
+
+Turno 4:
+Tú: nopo
+Bot: ¡Hola! Gracias por considerar Alloxentric. Para poder ayudarte de manera efectiva, ¿podrías proporcionarnos tu nombre y correo electrónico, por favor?
+
+Turno 5:
+Tú: ya te lo dije
+Bot: Javier Nanco, gracias por proporcionarnos tu nombre y correo electrónico (jnanco@gmail.com). Ahora, para poder brindarte información más personalizada, ¿podrías decirme el nombre de tu empresa?
+
+Turno 6:
+Tú: es Asesorias Nanco
+Bot: ¿En qué podemos ayudarte, Asesorias Nanco? ¿Necesitas mejorar tu servicio de atención al cliente, optimizar tu proceso de cobro de deudas o tal vez integrar una solución de gestión de recursos humanos? Nuestras soluciones en Alloxentric están diseñadas para ayudarte a mejorar la calidad y eficiencia en tus procesos. ¿Deseas ser agendado para discutir tus necesidades con uno de nuestros expertos?
+
+Turno 7:
+Tú: necesito hacer un bot que me ayude a mejorar miws conversaciones con los clientes
+Bot: En Alloxentric, podemos ayudarte a crear un chatbot para mejorar las conversaciones con tus clientes. Nuestro enfoque en la inteligencia artificial y la automatización puede ayudarte a reducir el número de tickets que llegan a los agentes humanos hasta en un 40%.
+
+Nuestro proceso implica integrar nuestra tecnología con tus sistemas existentes, como Zendesk o SysAid, para proporcionar una solución integral. Podemos crear materiales de capacitación, actualizar tus FAQ y generar documentación para respaldar nuestras acciones.
+
+Para avanzar, me gustaría saber más sobre tus necesidades específicas. ¿Cuál es el objetivo principal que deseas lograr con tu chatbot? ¿Quieres mejorar la atención al cliente, reducir costos o aumentar la eficiencia en la gestión de tickets? 
+
+Además, ¿deseas ser agendado para discutir más a fondo cómo podemos ayudarte a lograr tus objetivos con nuestro chatbot?
+
+Turno 8:
+Tú: si por favor
+Bot: Excelente decisión, Javier. Ahora que hemos confirmado su interés en crear un chatbot para mejorar las conversaciones con los clientes de Asesorias Nanco, puedo proporcionarle más información sobre cómo Alloxentric puede ayudar.
+
+Nuestro equipo de expertos trabajará con usted para diseñar un chatbot personalizado que se adapte a las necesidades específicas de su empresa. Nuestro objetivo es reducir el número de tickets que llegan a los agentes humanos en un 40% y mejorar la calidad de las interacciones con los clientes.
+
+¿Cuál es el principal objetivo que busca lograr con la implementación de este chatbot? ¿Es mejorar la atención al cliente, reducir los tiempos de respuesta o aumentar la eficiencia en la resolución de consultas?
+
+Turno 9:
+Tú: efectivamente. lo principal es atraer nuevos clientes al mundo de la contabilidad
+Bot: Excelente, Javier Nanco de Asesorias Nanco. Con la implementación del chatbot, su objetivo principal es atraer nuevos clientes al mundo de la contabilidad. 
+
+En Alloxentric, entendemos que la clave para lograr esto es mediante la automatización y personalización de las conversaciones con los clientes. Nuestro sistema de chatbot utiliza modelos de lenguaje avanzados (LLM) para clasificar y resumir conversaciones, generar respuestas específicas para su empresa y controlar la calidad de las respuestas.
+
+Algunos de los beneficios que puede obtener con nuestra solución son: 
+
+- Analizar el 100% de las conversaciones para identificar oportunidades de mejora.
+- Descubrir instancias de falla del chatbot para disminuir la frustración de los usuarios.
+- Reducir costos operativos al ampliar el alcance del chatbot.
+
+¿Desea saber más sobre cómo podemos ayudar a Asesorias Nanco a implementar un chatbot efectivo para atraer nuevos clientes?
+

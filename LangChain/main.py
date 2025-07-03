@@ -1,23 +1,32 @@
-# main.py  (o el archivo donde creas la app)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional
 from api.chat_logic import procesar_chat_simple
+from db.mongo import conectar_mongo
+from retriever.weaviate_client import conectar_weaviate
 
 app = FastAPI()
 
-# ---  CORS  -------------------------------------------------
+# Conectar bases de datos al iniciar la app
+@app.on_event("startup")
+async def startup_event():
+    conectar_mongo()
+    conectar_weaviate()
+
+# No necesitas shutdown explícito para cerrar conexiones Mongo/Weaviate si no quieres
+
+# Middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],       # cámbialo si quieres restringir
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# ---  API /chat  -------------------------------------------
+# API /chat
 class ChatRequest(BaseModel):
     input: str
     id_conversacion: Optional[str] = None
@@ -29,10 +38,9 @@ def chat(request: ChatRequest):
         id_conversacion=request.id_conversacion
     )
 
-# ---  SERVIR EL FRONTEND  ----------------------------------
-# Monta la carpeta FrontEnd en la raíz (“/”)
+# Servir frontend estático
 app.mount(
-    "/",  # sirve en la raíz
+    "/",
     StaticFiles(directory="FrontEnd", html=True),
     name="frontend",
 )

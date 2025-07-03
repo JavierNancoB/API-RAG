@@ -1,0 +1,44 @@
+Turno 1:
+Tú: hola
+Bot: Hola. Para poder ayudarte de manera personalizada, ¿podrías proporcionarme tu nombre y correo electrónico?
+
+Turno 2:
+Tú: me llamo josefa
+Bot: ¿Cuál es tu correo electrónico, Josefa?
+
+Turno 3:
+Tú: josefagonzalez@gmail.com
+Bot: ¿Es correcto el correo electrónico josefagonzalez@gmail.com? 
+
+Josefa, ¿cuál es el nombre de tu empresa?
+
+Turno 4:
+Tú: mi empresa se llama ServiciosIndustria
+Bot: Mi empresa es Alloxentric, nos especializamos en brindar soluciones de comunicación omnicanal y modular basadas en inteligencia artificial para empresas. ¿Cuál es la necesidad específica que tiene ServiciosIndustria y desea ser agendado para discutir más a fondo?
+
+Turno 5:
+Tú: que servicios puede brindar alloxentric
+Bot: Alloxentric ofrece servicios de soporte y atención al cliente que integran Inteligencia Artificial (IA) para mejorar la calidad y eficiencia. Nuestros servicios incluyen:
+
+1. Mesa de Ayuda con Agentes + IA, que reduce hasta un 40% los tickets que llegan a los agentes humanos.
+2. Comunicación Omnicanal a través de Voice Bots, Web Bots, Chatbots, Voz Institucional, STT (Speech to Text) y TTS (Text to Speech).
+3. Analítica CX para medir la calidad de cada interacción de forma automática.
+
+Nuestra plataforma empodera a los agentes con información actualizada y mide la calidad de las interacciones. También utilizamos análisis de datos para mejorar las capacidades de nuestros agentes y bots.
+
+Nuestros servicios están diseñados para startups y scaleups, y se enfocan en brindar un servicio de alta calidad, con flexibilidad y escalabilidad.
+
+¿Desea ser agendado para discutir cómo podemos ayudar a ServiciosIndustria?
+
+Turno 6:
+Tú: para soluciones omnicanales? principalmente dirigidos a que empresas 2b2 nos contacten por un correo automatizado de whatsapp
+Bot: Para ofrecerte una respuesta más precisa, ¿podrías proporcionarnos tu nombre y correo electrónico? De esta forma, podremos asistirte de manera más personalizada y mantener un registro de nuestra conversación.
+
+Turno 7:
+Tú: pero si te dije
+Bot: Josefa, gracias por compartir tu interés en nuestras soluciones. ¿Cuál es el objetivo principal que deseas lograr con la implementación de soluciones omnicanales para tu empresa, ServiciosIndustria?
+
+Turno 8:
+Tú: ya te dije
+Bot:  Para continuar con la conversación, ¿cuál es el objetivo principal que deseas lograr con la implementación de soluciones omnicanales para tu empresa, ServiciosIndustria?
+

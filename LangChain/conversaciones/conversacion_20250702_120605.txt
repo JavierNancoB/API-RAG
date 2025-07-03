@@ -1,0 +1,12 @@
+Turno 1:
+Tú: HOLA
+Bot: ¡Hola! Bienvenido a Alloxentric. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: me llamo josefa gonzalez
+Bot: ¡Hola! Para poder ayudarte de manera efectiva, me gustaría saber un poco más sobre ti. ¿Podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 3:
+Tú: me llamo josefa gonzalez
+Bot: ¡Hola! Para poder ayudarte de manera efectiva, me gustaría saber tu nombre y correo electrónico. ¿Podrías proporcionarme esa información, por favor?
+
