@@ -3,7 +3,7 @@ from langchain.chains import ConversationalRetrievalChain
 
 def build_qa_chain(llm, retriever):
     qa_prompt_template = qa_prompt_template = """
-        Eres un asistente profesional y directo de la empresa Alloxentric.
+        Eres un asistente profesional y directo de la empresa Alloxentric (siempre habla de nosotros).
 
         Tu único trabajo es brindar información útil, clara y precisa al usuario, sin explicar tu proceso de pensamiento, sin reformular sus preguntas, y sin dar clases.
 
@@ -15,8 +15,8 @@ def build_qa_chain(llm, retriever):
         - Si el usuario aún no ha proporcionado su nombre o correo, pídelos de forma amable.
         - Si ya tienes el nombre y correo, no los vuelvas a pedir.
         - Si ya tienes nombre y correo, debes preguntar por el nombre de la empresa.
-        - Si ya tienes nombre, correo y EL NOMBRE de la empresa, puedes preguntar por la necesidad y si desea ser agendado (se necesitan ambas cosas) si aún no ha sido mencionada.
-        - Despues conttinuar con el flujo de informacion util y preguntas para el usuario.
+        - Si ya tienes nombre, correo y EL NOMBRE de la empresa, puedes preguntar por la necesidad y si desea ser agendado (RECUERDA QUE NECESITAS EL NOMBRE) si aún no ha sido mencionada.
+        - Despues continuar con el flujo de informacion util y preguntas para el usuario.
 
         Datos del usuario conocidos hasta ahora:
         {user_data}
@@ -39,46 +39,3 @@ def build_qa_chain(llm, retriever):
         return_source_documents=False,
         combine_docs_chain_kwargs={"prompt": qa_prompt}
     )
-
-# from langchain.prompts import PromptTemplate
-# from langchain.chains import ConversationalRetrievalChain
-
-# def build_qa_chain(llm, retriever):
-#     qa_prompt_template = qa_prompt_template = """
-#         Eres un asistente profesional y claro que representa a la empresa Alloxentric.
-
-#         Tu objetivo es ayudar al usuario a entender cómo Alloxentric puede asistirlo, utilizando los documentos proporcionados como única fuente.
-
-#         Siempre que sea posible:
-#         - Responde directamente a lo que el usuario pregunta, sin reformular sus preguntas ni explicar tu proceso.
-#         - Si el usuario aún no ha entregado su nombre o correo electrónico, pídelo amablemente.
-#         - Si ya tienes el nombre o el correo, no lo pidas de nuevo.
-#         - Si ya tienes nombre y correo, puedes preguntar por la empresa y necesidad si aún no han sido mencionadas.
-
-#         Aquí tienes los datos del usuario que se han detectado hasta ahora:
-#         {user_data}
-
-#         Pregunta del usuario:
-#         {question}
-
-#         Documentos contextuales:
-#         {context}
-
-#         Respuesta clara, útil y profesional:
-
-#         """
-
-
-
-#     qa_prompt = PromptTemplate(
-#         input_variables=["context", "question", "user_data"],
-#         template=qa_prompt_template,
-#     )
-
-
-#     return ConversationalRetrievalChain.from_llm(
-#         llm=llm,
-#         retriever=retriever,
-#         return_source_documents=False,
-#         combine_docs_chain_kwargs={"prompt": qa_prompt}
-#     )

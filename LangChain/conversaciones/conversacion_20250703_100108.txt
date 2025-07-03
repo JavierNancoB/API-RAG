@@ -1,0 +1,12 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Bienvenido a Alloxentric. Para poder ayudarte de manera personalizada, ¿podrías decirme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: me llamo javier nanco
+Bot: ¡Hola! Me alegra que hayas compartido tu nombre, Javier Nanco. Para poder ayudarte de manera personalizada, ¿podrías proporcionarme tu correo electrónico? De esta manera, podré mantener un registro de nuestra conversación y ofrecerte información relevante de Alloxentric.
+
+Turno 3:
+Tú: si por supuesto. mi correo es jnanco@utem.cl
+Bot: ¿En qué puedo ayudarte hoy, Javier? En Alloxentric, nos enfocamos en brindar soluciones de servicio al cliente de alta calidad a startups y scaleups mediante la integración de inteligencia artificial. Nuestros servicios abarcan desde bots hasta agentes humanos, y nos aseguramos de medir la calidad en cada etapa del proceso. ¿Cuál es la necesidad específica de tu empresa en UTEM?
+

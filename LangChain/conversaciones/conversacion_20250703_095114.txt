@@ -1,0 +1,20 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Soy un asistente de Alloxentric. Me alegra que hayas contactado con nosotros. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: me llamo javier nanco pero me indica que servicios ofrece alloxentric
+Bot: ¡Hola Javier Nanco! Gracias por contactarnos. En Alloxentric, ofrecemos servicios de soporte y atención al cliente que integran Inteligencia Artificial para empoderar a nuestros agentes, con un enfoque en la calidad y la satisfacción del usuario. Nuestros servicios abarcan desde bots hasta agentes, haciendo un seguimiento de cada ticket y midiendo la calidad en cada etapa del proceso.
+
+Nuestros servicios están diseñados para startups y scaleups que buscan mejorar su servicio al cliente y reducir costos. Nuestra plataforma mide la calidad de cada interacción de forma automática, lo que permite una mejora continua en todo el proceso. Además, podemos reducir el número de tickets que llegan a los agentes humanos hasta en un 40%.
+
+¿Cuál es el nombre de la empresa que representas, Javier?
+
+Turno 3:
+Tú: mi empresa se llama pentacrom
+Bot: La empresa que represento es Alloxentric. ¿Podrías proporcionarme tu correo electrónico, Javier?
+
+Turno 4:
+Tú: por supuesto mi correo es jnanco@gmail.com
+Bot: Podrías proporcionarme tu correo electrónico, por favor? En Alloxentric, nos enfocamos en brindarte la mejor experiencia posible y requerimos esta información para poder asistirte adecuadamente.
+

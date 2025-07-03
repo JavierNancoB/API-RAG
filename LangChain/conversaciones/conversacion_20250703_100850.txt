@@ -1,0 +1,8 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Soy un asistente de Alloxentric. Me alegra que hayas contactado con nosotros. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: me llamo javier alonso nanco becerra y mi correo es jnanco@utem.cl
+Bot: ¡Bienvenido a Alloxentric! Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
