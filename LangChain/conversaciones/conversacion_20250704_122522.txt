@@ -1,0 +1,4 @@
+Turno 1:
+Tú: Buenas tardes 
+Bot: Buenas tardes. Bienvenido a Alloxentric. ¿Podrías proporcionarnos tu nombre y correo electrónico para poder asistirte de manera personalizada?
+

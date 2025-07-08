@@ -1,0 +1,38 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Soy un asistente de Alloxentric. Me alegra que hayas contactado con nosotros. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: ale
+Bot: Hola ale, gracias por proporcionarnos tu nombre. Para poder ayudarte de manera efectiva, ¿podrías proporcionarnos tu correo electrónico? Además, ¿podrías decirnos el nombre de tu empresa para entender mejor tus necesidades? En Alloxentric, nos especializamos en brindar servicios de soporte con Inteligencia Artificial para startups y scaleups, mejorando la calidad y satisfacción del usuario.
+
+Turno 3:
+Tú: a@aa.com
+Bot: ¿Cuál es el nombre de tu empresa, ale? En Alloxentric estamos ansiosos por conocer más sobre tus necesidades y cómo podemos ayudarte a mejorar tu servicio al cliente o proceso de cobro de deudas.
+
+Turno 4:
+Tú: bot menos latero
+Bot: Ale, gracias por proporcionarnos el nombre de tu empresa, "bot menos latero". Ahora que tenemos tu nombre, correo y el nombre de tu empresa, me gustaría saber más sobre tus necesidades. ¿Qué necesitas para "bot menos latero"? ¿Deseas agendar una reunión para discutir cómo podemos ayudarte a mejorar tu servicio de atención al cliente o automatizar procesos con nuestra tecnología de Inteligencia Artificial en Alloxentric?
+
+Turno 5:
+Tú: quiero info antes
+Bot: Para seguir adelante con la información que necesitas, ale de bot menos latero, te cuento que en Alloxentric nos enfocamos en aplicar Inteligencia Artificial para mejorar la retención de clientes y automatizar procesos. 
+
+Nuestro modelo de IA aprende del comportamiento de los clientes y predice el riesgo de abandono. Para implementar esta solución, necesitamos información estadística completa sobre el churn y el comportamiento de pago de tus clientes.
+
+¿Qué tipo de información específica necesitas saber sobre nuestra solución para considerar agendar una reunión?
+
+Turno 6:
+Tú: me aburriste
+Bot: Ale, gracias por tu pregunta. En Alloxentric, entendemos que la automatización de procesos y la mejora en la atención al cliente son fundamentales para cualquier empresa. Nuestra plataforma permite categorizar mensajes de manera automática y generar respuestas o tareas según sea necesario, notificando a las personas adecuadas a través de varios canales.
+
+Nuestra solución puede ayudar a "Bot menos latero" a optimizar su servicio de atención al cliente y automatizar procesos de manera eficiente. ¿Podrías decirme un poco más sobre tus necesidades específicas y cómo crees que nuestra solución podría ayudarte? ¿Deseas ser agendado para discutir más a fondo cómo podemos apoyarte?
+
+Turno 7:
+Tú: bot de voz
+Bot: Nuestro bot de voz utiliza tecnología de Inteligencia Artificial para entender y responder a las preguntas de los clientes de manera eficiente. En Alloxentric, nuestra solución de bot de voz se integra con nuestra plataforma de comunicación omnicanal, lo que permite una experiencia de usuario fluida y personalizada.
+
+Nuestro bot de voz puede realizar diversas tareas, como responder preguntas frecuentes, proporcionar información sobre productos o servicios, y hasta interactuar con otros sistemas de gestión de recursos para resolver problemas de manera efectiva.
+
+Además, nuestra Analítica CX de Voice Bots permite evaluar y mejorar la calidad de la comunicación, identificar puntos de insatisfacción y optimizar la experiencia del usuario. ¿Desea saber más sobre cómo podemos ayudar a "bot menos latero" a mejorar su servicio de atención al cliente o automatizar procesos con nuestra solución de bot de voz?
+

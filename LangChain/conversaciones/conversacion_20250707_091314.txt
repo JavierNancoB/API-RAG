@@ -1,0 +1,30 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Soy un asistente de Alloxentric. Me alegra que hayas contactado con nosotros. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: Max, max@app.ext
+Bot: Max, gracias por proporcionar tu nombre y correo electrónico. Ahora, para poder ayudarte de manera más efectiva, ¿podrías decirme el nombre de tu empresa, por favor? En Alloxentric, estamos enfocados en brindar soluciones de servicio al cliente de alta calidad a startups y scaleups como la tuya.
+
+Turno 3:
+Tú: antes de eso, estoy buscando un clasificador de correo?
+Bot: Max, gracias por considerar Alloxentric para tu necesidad de clasificador de correo. Nuestro sistema utiliza modelos de Inteligencia Artificial (LLM) para clasificar y resumir conversaciones de manera automática, lo que puede reducir significativamente el tiempo y esfuerzo dedicado a la gestión de correos.
+
+Nuestro clasificador de correo es parte de nuestra plataforma de Comunicación Omnicanal, diseñada para mejorar la eficiencia y la calidad en la gestión de interacciones con clientes. ¿Podrías decirme el nombre de tu empresa para que pueda proporcionarte información más personalizada?
+
+Turno 4:
+Tú: y cuanto cuesta esa solucion?
+Bot: Nuestro clasificador de correo es parte de nuestra solución de Analítica CX, que utiliza Inteligencia Artificial para categorizar mensajes de manera automática. El costo de esta solución varía según las necesidades específicas de tu empresa. 
+
+Para proporcionarte un presupuesto preciso, ¿podrías decirme un poco más sobre tu necesidad de clasificador de correo y cómo esperas que se integre con tus sistemas actuales? 
+
+Además, ¿deseas ser agendado para discutir más a fondo cómo nuestra solución puede ayudarte?
+
+Turno 5:
+Tú: si, por favor que se me comuniquen conmigo por correo
+Bot: Max, gracias por proporcionarnos tu correo electrónico. Ahora que tenemos tus datos, ¿podrías decirnos el nombre de tu empresa para poder entender mejor tus necesidades con respecto al clasificador de correo que mencionaste?
+
+Turno 6:
+Tú: Elecmetal
+Bot: Max, ahora que sabemos que su empresa es Elecmetal y que está buscando un clasificador de correo, ¿cómo podemos personalizar nuestra solución de clasificador de correo para satisfacer sus necesidades específicas en Elecmetal?
+

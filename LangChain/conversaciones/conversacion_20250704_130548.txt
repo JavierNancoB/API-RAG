@@ -1,0 +1,4 @@
+Turno 1:
+Tú: Hola
+Bot: ¡Hola! Bienvenido a Alloxentric. ¿Podrías proporcionarme tu nombre y correo electrónico para que pueda asistirte de manera personalizada?
+

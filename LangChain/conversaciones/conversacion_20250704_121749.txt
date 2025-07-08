@@ -1,0 +1,18 @@
+Turno 1:
+Tú: Hola
+Bot: Hola, gracias por contactarnos. Soy un asistente de Alloxentric, una empresa especializada en servicios de atención al cliente y gestión de procesos empresariales con ayuda de inteligencia artificial. 
+
+Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: Me puedes ayudar, quiero un auto
+Bot: Para poder ayudarte a conseguir un auto, primero necesito saber un poco más sobre ti. ¿Podrías proporcionarme tu nombre y correo electrónico, por favor? De esta manera, podré asistirte de manera más personalizada y mantener un registro de nuestra conversación. En Alloxentric, nos enfocamos en brindar soluciones eficientes y personalizadas a nuestros clientes.
+
+Turno 3:
+Tú: Quiero ser millonario
+Bot: Para convertirte en millonario, es fundamental tener un plan claro y disciplinado. En Alloxentric, nos enfocamos en ayudar a las empresas a optimizar sus procesos y aumentar su eficiencia a través de la Inteligencia Artificial.
+
+ Primero, ¿podrías proporcionarme tu nombre y correo electrónico para que pueda entender mejor tus necesidades y brindarte información más personalizada?
+
+Una vez que tenga esa información, podré guiarte a través de los pasos que podrían ayudarte a alcanzar tus objetivos financieros. Además, me gustaría saber el nombre de tu empresa para entender mejor tu contexto.
+

@@ -1,0 +1,50 @@
+Turno 1:
+Tú: Mrworldwide mr 305 ja thats rigth, dale +×÷=/_<>[])(*&^%$##!-'cvbnm
+Bot: It seems like you're having some trouble with your message. I'm here to help. Could you please tell me a bit more about what you're looking for or what's on your mind? I'm from Alloxentric, a company that specializes in providing top-notch customer service solutions for startups and scaleups, leveraging AI to enhance user satisfaction.
+
+By the way, could you please provide your name and email address so I can better assist you?
+
+Turno 2:
+Tú: Pitbull
+Bot: Hi Pitbull, welcome! I'm from Alloxentric, a company that specializes in providing top-notch customer service solutions for startups and scaleups, leveraging AI to enhance user satisfaction. 
+
+To better assist you, could you please provide your email address? Additionally, may I know the name of your company?
+
+Turno 3:
+Tú: Rajorquerarobles@gmail.com,  mr3o5inc
+Bot: Hello Pitbull from mr3o5inc, 
+
+Now that we have your contact information, could you please tell me more about your current needs or challenges that you're facing, particularly in regards to customer service or debt collection? 
+
+At Alloxentric, we specialize in providing top-notch customer service solutions and debt collection optimization through our AI-powered platforms. We'd love to understand how we can assist you. Would you like to be scheduled for a follow-up conversation?
+
+Turno 4:
+Tú: Yes
+Bot: Now that we've established that you're open to being scheduled for a follow-up conversation, Pitbull from mr3o5inc, let's discuss how Alloxentric can help optimize your customer service or debt collection process. Our AI-driven solutions can help reduce costs and improve efficiency. Can you please share more about your specific needs or challenges you're facing, so we can better understand how to assist you?
+
+Turno 5:
+Tú: No
+Bot: Now that we've discussed Alloxentric's services, the next steps would be to explore how our solutions can be tailored to your specific needs in customer service or debt collection for mr3o5inc. 
+
+We can schedule a call to discuss the details of our services and how they can benefit your business. Our AI-powered solutions can help you enhance customer service, reduce costs, and improve collection rates.
+
+Would you like to be contacted by our team to schedule a call at your convenience?
+
+Turno 6:
+Tú: Yes
+Bot: At Alloxentric, we understand that mr3o5inc is looking for a reliable solution for customer service or debt collection. Our AI-powered services can help optimize your processes, reducing costs and improving efficiency. 
+
+For customer service, our platform empowers agents with the latest product information, measures quality holistically, and integrates automation to manage costs. We can reduce the number of tickets reaching human agents by up to 40%. 
+
+For debt collection, our Debt Collection Optimizer uses AI to analyze payment behavior, predict debtor intent, and identify the optimal contactability mix. This can lead to a decrease in collection costs of up to 40%. 
+
+Can you please share more about your specific needs and challenges, Pitbull?
+
+Turno 7:
+Tú: I currently have a hight amount of collection cost
+Bot: At Alloxentric, we understand that high collection costs can be a significant burden for your business, mr3o5inc. Our Debt Collection Optimizer, powered by Artificial Intelligence, can help you reduce these costs by up to 40%. 
+
+Our technology analyzes the payment behavior of your debtors' portfolio, identifying patterns and intent to determine the minimum action required to obtain payment. This enables you to optimize your resources allocation and improve collection rates.
+
+To better understand your specific challenges and needs, could you please tell me more about your current debt collection process and the issues you're facing?
+

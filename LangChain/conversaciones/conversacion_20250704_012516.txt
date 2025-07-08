@@ -1,0 +1,34 @@
+Turno 1:
+Tú: hola
+Bot: ¡Hola! Soy un asistente de Alloxentric. Me alegra que hayas contactado con nosotros. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 2:
+Tú: mi nombre es javier nanco
+Bot: ¿Cuál es tu correo electrónico, Javier Nanco? En Alloxentric, estamos aquí para ayudarte a optimizar tus procesos de negocio con nuestras soluciones de inteligencia artificial.
+
+Turno 3:
+Tú: jnanco@gmail.com me indica los servicios de alloxentric por favor
+Bot: Hola Javier Nanco, gracias por contactarnos. En Alloxentric ofrecemos servicios de Inteligencia Artificial para mejorar la experiencia del cliente y automatizar procesos. Nuestros servicios incluyen:
+
+- Mesa de Ayuda: Agentes + IA, que reduce el número de tickets que llegan a los agentes humanos hasta en un 40%.
+- Chatbot de canal de texto para confirmar agendamientos, coordinar entregas, vender productos y servicios, preliquidación de seguros y soporte técnico.
+- Plataforma de Comunicación Omnicanal que integra bots y agentes humanos para labores como cobranza, logística y ventas.
+
+Nuestras soluciones están diseñadas para startups y scaleups que buscan mejorar su servicio al cliente y reducir costos. ¿Cuál es tu necesidad específica, Javier? ¿Deseas ser agendado para discutir cómo podemos ayudarte?
+
+Turno 4:
+Tú: claro deben trabajar en mi empresa llamada pentacrom, una empresa de logistica. la idea es hacer un chatbot automatizado de whatsapp que indique cuando llegará el pedido
+Bot: En Alloxentric, podemos ayudarte a implementar un chatbot automatizado de WhatsApp para indicar cuándo llegará un pedido en tu empresa de logística, Pentacrom. Nuestro Chatbot de canal de texto funciona sobre WhatsApp y otros servicios de mensajería populares, y se puede integrar con otros medios y sistemas para proporcionar una experiencia omnicanal.
+
+Nuestro chatbot utiliza modelos de Inteligencia Artificial (IA) para comprender las intenciones de los clientes y responder de manera precisa y personalizada. Además, podemos configurar el chatbot para que se integre con tus sistemas de gestión de pedidos y envíe notificaciones automáticas a los clientes sobre el estado de sus pedidos.
+
+Para seguir adelante, ¿podrías decirme si deseas ser agendado para una reunión con uno de nuestros expertos para discutir los detalles de la implementación del chatbot en Pentacrom?
+
+Turno 5:
+Tú: me gustaria la verdad
+Bot: Excelente decisión, Javier. En Alloxentric, podemos ayudarte a implementar un chatbot automatizado de WhatsApp para indicar cuándo llegará un pedido en Pentacrom. Nuestro equipo de expertos trabajará contigo para configurar y personalizar el chatbot según tus necesidades.
+
+ Nuestro sistema de chatbot utiliza inteligencia artificial para proporcionar respuestas precisas y personalizadas a tus clientes. Además, nuestra plataforma de comunicación omnicanal te permite gestionar todas las interacciones con tus clientes en un solo lugar.
+
+ Para seguir adelante, me gustaría saber más sobre tus necesidades específicas. ¿Cuál es el volumen de pedidos que manejas actualmente en Pentacrom, y qué tipo de información deseas que el chatbot proporcione a tus clientes?
+
