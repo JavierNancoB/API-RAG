@@ -1,0 +1,12 @@
+Turno 1:
+Tú: 
+Bot: Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?
+
+Turno 2:
+Tú: Hola, quería saber que es lo que hace Alloxentric.
+Bot: Hola Agustin, gracias por tu interés en Alloxentric. Somos una empresa que ofrece soluciones de comunicación omnicanal con inteligencia artificial (IA) aplicada a procesos End to End. Nuestros productos incluyen bots de voz y texto que permiten interacciones fluidas con los clientes en diferentes idiomas y acentos locales.
+
+Nuestros bots de voz pueden ser utilizados para labores como agendamiento, cobranza, precalificación de ventas, recordatorios, encuestas y ventas, y permiten transferencia a agentes humanos con control completo del contexto. Por otro lado, nuestros bots de texto para sitios web pueden responder preguntas frecuentes, entregar soporte técnico, informar acerca del estado de una orden o caso y coordinar citas médicas o realizar agendamiento.
+
+Me gustaría saber un poco más sobre ti para poder brindarte información más personalizada. ¿Podrías proporcionarme tu correo electrónico, por favor? Además, ¿podrías decirme el nombre de la empresa para la que trabajas?
+
