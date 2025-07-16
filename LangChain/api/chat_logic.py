@@ -151,6 +151,18 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
         "user_data": resumen_usuario
     })
 
+    # Si la conversación es nueva, devolvemos un saludo inicial
+    if nueva_conversacion:
+        saludo_inicial = "Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?"
+        chat_history[-1] = (query, saludo_inicial)
+        guardar_conversacion_mongo(chat_history, id_conversacion=id_conversacion)
+        guardar_conversacion_archivo(chat_history, id_conversacion=id_conversacion)
+        return {
+            "respuesta": saludo_inicial,
+            "id_conversacion": id_conversacion,
+            "nueva_conversacion": nueva_conversacion
+        }
+
     chat_history[-1] = (query, respuesta["answer"])
 
     guardar_conversacion_mongo(chat_history, id_conversacion=id_conversacion)

@@ -1,0 +1,30 @@
+Turno 1:
+Tú: 
+Bot: Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?
+
+Turno 2:
+Tú: Hola, quería saber que es lo que hace Alloxentric.
+Bot: ¡Hola! En Alloxentric nos especializamos en soluciones de comunicación omnicanal con inteligencia artificial (IA) aplicada a procesos de extremo a extremo. Nuestros productos incluyen bots de voz y texto que permiten interacciones fluidas con los clientes en su idioma y acento local.
+
+Nuestros bots de voz permiten labores como agendamiento, cobranza, precalificación de ventas, recordatorios, encuestas y ventas, con la capacidad de transferir a un agente humano con control completo del contexto. Por otro lado, nuestros bots de texto para sitios web permiten conversaciones estructuradas y semiestructuradas para responder preguntas frecuentes, entregar soporte técnico, informar sobre el estado de una orden o caso, y coordinar citas médicas o realizar agendamiento.
+
+Para saber más sobre cómo podemos ayudarte, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 3:
+Tú: Estaba buscando un sistema para agendar en mi consulta
+Bot: ¡Claro! En Alloxentric podemos ayudarte con eso. Nuestro sistema de comunicación omnicanal ofrece una solución de agendamiento de citas para consultas médicas. 
+
+Para poder ayudarte de manera más efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
+Turno 4:
+Tú: Andres, y cuanto cuesta esa solución?
+Bot: Hola Andres, gracias por tu interés en nuestra solución de agendamiento de citas médicas de Alloxentric. Nuestro sistema de comunicación omnicanal ofrece una solución integral para la gestión de citas médicas, permitiendo la automatización de procesos y mejorando la experiencia del paciente.
+
+El costo de nuestra solución depende de varios factores, como el número de usuarios, la complejidad de la implementación y las funcionalidades requeridas. Sin embargo, podemos decir que nuestra solución es altamente personalizable y escalable.
+
+Para proporcionarte un presupuesto más preciso, ¿podrías proporcionarnos tu correo electrónico? Además, ¿podrías decirnos el nombre de tu empresa? Esto nos permitirá entender mejor tus necesidades y proporcionarte una respuesta más adecuada.
+
+Turno 5:
+Tú: De mi consulta personal, mi correo es jandresacuna@dialogo.cl
+Bot: Andres, gracias por proporcionarnos tu correo electrónico. Ahora que tenemos tu nombre y correo (jandresacuna@dialogo.cl), nos gustaría saber el nombre de la empresa para la cual deseas agendar citas médicas. ¿Podrías proporcionarnos el nombre de tu empresa? En Alloxentric, contamos con una plataforma de comunicación omnicanal que puede ayudarte a optimizar procesos como el agendamiento de citas.
+

@@ -47,6 +47,21 @@
       idConversacion = respuesta.id_conversacion;
       appendMessage(respuesta.respuesta, "bot");
     }
+
+    // Enviar mensaje vacío para iniciar conversación
+    window.addEventListener("DOMContentLoaded", async () => {
+      const respuesta = await fetch("http://localhost:8000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          input: "", // mensaje vacío
+          id_conversacion: null
+        })
+      }).then(res => res.json());
+
+      idConversacion = respuesta.id_conversacion;
+      appendMessage(respuesta.respuesta, "bot");
+    });
   </script>
 </body>
 </html>

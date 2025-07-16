@@ -1,0 +1,4 @@
+Turno 1:
+Tú: 
+Bot: ¡Bienvenido a Alloxentric! Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
+
