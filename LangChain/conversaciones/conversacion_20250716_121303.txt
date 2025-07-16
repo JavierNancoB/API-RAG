@@ -1,0 +1,36 @@
+Turno 1:
+Tú: 
+Bot: Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?
+
+Turno 2:
+Tú: holq
+Bot: Parece que hubo un error en tu mensaje. ¿Podrías proporcionar tu nombre y correo electrónico para que pueda ayudarte con tus necesidades relacionadas con la optimización de procesos de cobro de deudas o servicios de atención al cliente de Alloxentric?
+
+Turno 3:
+Tú: josefa
+Bot: Josefa, gracias por responder. Para poder ayudarte de manera más efectiva, ¿podrías proporcionarme tu correo electrónico? En Alloxentric, podemos ayudarte con la optimización de procesos de cobro de deudas o servicios de atención al cliente a través de nuestra Plataforma de Comunicación Omnicanal y Analítica CX.
+
+Turno 4:
+Tú: josefa@miempresa.cl
+Bot: Josefa, gracias por tu consulta. Nuestros servicios de comunicación omnicanal y Analítica CX pueden ayudarte a optimizar los procesos de cobro de deudas y mejorar la atención al cliente. ¿Cuál es tu necesidad específica en cuanto a la optimización de estos procesos en tu empresa? ¿Deseas ser agendada para discutir cómo podemos ayudarte?
+
+Turno 5:
+Tú: necesito agendar reuniones
+Bot: Puedes agendar una reunión para discutir la optimización de procesos de cobro de deudas o servicios de atención al cliente contactándonos directamente a través de nuestro sitio web o enviando un correo a info@alloxentric.com. Nuestro equipo estará encantado de coordinar una reunión según tus necesidades y disponibilidad. ¿Te gustaría que coordinemos una fecha y hora específica para la reunión?
+
+Turno 6:
+Tú: necesito agendar reuniones en mi empresa
+Bot: En Alloxentric, podemos ayudarte a agendar reuniones en tu empresa de manera eficiente. Nuestro servicio de Omnichannel Communication permite integrar diferentes canales de comunicación, como voz, chat y agentes, para interactuar con tus clientes o empleados de manera efectiva. ¿Cuál es el objetivo principal de estas reuniones en tu empresa?
+
+Turno 7:
+Tú: el objetivo es cerrar tratos
+Bot: En Alloxentric, entendemos que optimizar los procesos de cobro de deudas y servicios de atención al cliente es crucial para tu negocio, Josefa. Actualmente, nuestra plataforma de comunicación omnicanal permite a empresas como la tuya, "mi empresa", automatizar y mejorar la comunicación con sus clientes a través de diferentes canales. Nuestros productos, como Voice Bots y Chatbots, pueden ayudar a simplificar y eficientar el proceso de cerrar tratos. ¿Podrías contarme un poco más sobre cómo gestionas actualmente las reuniones para cerrar tratos en "mi empresa"?
+
+Turno 8:
+Tú: actualmente tengo un formulario de contacto
+Bot: En Alloxentric, entendemos que la gestión de reuniones para cerrar tratos es crucial. Actualmente, ¿utilizas alguna herramienta o plataforma específica para agendar y gestionar estas reuniones a través de un formulario de contacto, o se hace de manera manual?
+
+Turno 9:
+Tú: se hace de manera manual
+Bot: En Alloxentric, podemos ayudarte a automatizar y mejorar la gestión de reuniones para cerrar tratos en tu empresa de manera efectiva. Nuestra plataforma de comunicación omnicanal y modular, basada en inteligencia artificial, permite optimizar y mejorar la comunicación con tus clientes. Podemos ayudarte a integrar nuestras soluciones con tus sistemas actuales y a personalizarlas según tus necesidades. ¿Cuál es el principal desafío que enfrentas actualmente en la gestión de reuniones y cómo podemos ayudarte a superarlo?
+

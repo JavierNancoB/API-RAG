@@ -3,20 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>ChatBot Alloxentric</title>
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    #chat { max-width: 600px; margin: auto; }
-    .msg { margin-bottom: 1rem; }
-    .user { text-align: right; color: blue; }
-    .bot { text-align: left; color: green; }
-    input, button { padding: 0.5rem; font-size: 1rem; }
-  </style>
 </head>
 <body>
-  <div id="chat"></div>
-  <input id="userInput" placeholder="Escribe tu mensaje..." />
-  <button onclick="sendMessage()">Enviar</button>
+  <h1>Bienvenido a Alloxentric</h1>
+  <p>Interfaz de prueba del widget del chatbot.</p>
 
+  <!-- Variables de configuración global (opcional) -->
   <script>
     let idConversacion = null;
     const chatDiv = document.getElementById("chat");
@@ -63,5 +55,8 @@
       appendMessage(respuesta.respuesta, "bot");
     });
   </script>
+
+  <!-- Carga del script del widget -->
+  <script src="chat.js" async></script>
 </body>
 </html>
