@@ -17,6 +17,8 @@ El entorno se compone de dos servicios:
 cd weaviate_local
 ```
 
+Cargar los .PDF necesarios en la carpeta [PDF](./PDF/), estos archivos seran directamente cargados en la base de datos vectorial. Es importante comprobar que la carpeta tenga los archivos antes de correr la imagen de loader.
+
 ---
 
 ## 🚀 2. Levantar el stack
