@@ -13,30 +13,12 @@ Este proyecto permite realizar preguntas sobre documentos cargados en una base v
 
 ### 🐍 Python
 
-* Python 3.8 o superior.
+* Python 3.11.9 o superior.
 
 ### 🧠 Weaviate (local)
 
 Debes tener **Weaviate corriendo de forma local**, ya sea con Docker o instalado directamente.
-
-#### Opción 1: Usando Docker
-
-```bash
-docker run -d \
-  -p 8080:8080 \
-  -p 50051:50051 \
-  --name weaviate \
-  semitechnologies/weaviate:latest \
-  --host 0.0.0.0 \
-  --port 8080 \
-  --grpc-port 50051 \
-  --persistency.data.path="/var/lib/weaviate" \
-  --enable-module=text2vec-contextionary \
-  --module-config='{"text2vec-contextionary": {"vectorizeClassName": "false"}}' \
-  --default-vectorizer=none
-```
-
-> Asegúrate de que Weaviate esté corriendo en `http://localhost:8080` antes de ejecutar el script.
+Para más informacion respecto a la base de datos Vectorial visitar la [documentación de weaviate](../weaviate_local/Readme.md) de este proyecto.
 
 ### 🔑 Clave API de Groq
 
