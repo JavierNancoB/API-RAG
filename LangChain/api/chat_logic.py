@@ -33,6 +33,9 @@ from embeddings.embedding_model import CustomEmbedding
 from llm.groq_model import load_llm
 from retriever.vector_store import create_vectorstore
 
+from datetime import datetime
+import time
+
 
 def extraer_json_del_texto(texto):
     """
@@ -104,22 +107,12 @@ def inicializar_componentes():
 
 
 def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
-    """
-    Procesa una conversación con el usuario, integrando extracción de datos
-    desde el texto con LLM y generando una respuesta basada en contexto.
-
-    Args:
-        query (str): Pregunta o entrada del usuario.
-        chat_history (list[tuple[str, str]] | None): Historial de conversación.
-        id_conversacion (str | None): ID de conversación previa.
-
-    Returns:
-        dict: Diccionario con la respuesta generada, ID de conversación
-              y si fue una nueva conversación.
-    """
     inicializar_componentes()
 
     nueva_conversacion = False
+
+    # --- Tiempo cargar conversación MongoDB ---
+    start_db_load = time.perf_counter()
 
     if id_conversacion:
         if existe_conversacion_finalizada(id_conversacion):
@@ -134,14 +127,27 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
         chat_history = []
         nueva_conversacion = True
 
+    end_db_load = time.perf_counter()
+    print(f"⏱️ Tiempo carga conversación MongoDB: {(end_db_load - start_db_load)*1000:.2f} ms")
+
     chat_history.append((query, ""))
 
+    # --- Tiempo llamada extractor_chain (API LLM) ---
+    start_llm_extract = time.perf_counter()
     resultado = extractor_chain.invoke({"chat_history": str(chat_history)})
+    end_llm_extract = time.perf_counter()
+    print(f"⏱️ Tiempo extractor_chain.invoke(): {(end_llm_extract - start_llm_extract)*1000:.2f} ms")
+
     print("🔍 Resultado bruto extractor_chain.invoke():")
     print(resultado.content)
 
     json_str = extraer_json_del_texto(resultado.content)
+
+    # --- Tiempo carga datos usuario MongoDB ---
+    start_db_load_user = time.perf_counter()
     datos_usuario = cargar_datos_usuario(id_conversacion) or {}
+    end_db_load_user = time.perf_counter()
+    print(f"⏱️ Tiempo carga datos usuario MongoDB: {(end_db_load_user - start_db_load_user)*1000:.2f} ms")
 
     for campo in ["nombre", "empresa", "necesidad", "correo", "idioma", "agenda"]:
         if campo not in datos_usuario:
@@ -166,13 +172,16 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
                         datos_usuario[key] = valor_extraido
                         datos_actualizados = True
 
+            # --- Tiempo guardar datos usuario MongoDB (si hay cambios) ---
             if datos_actualizados:
+                start_db_save_user = time.perf_counter()
                 guardar_usuario(datos_usuario)
+                end_db_save_user = time.perf_counter()
                 print("✅ Datos actualizados guardados en Mongo:")
+                print(json.dumps(convertir_objetos_para_json(datos_usuario), indent=4))
+                print(f"⏱️ Tiempo guardar datos usuario MongoDB: {(end_db_save_user - start_db_save_user)*1000:.2f} ms")
             else:
                 print("ℹ️ No hubo nuevos datos que guardar.")
-
-            print(json.dumps(convertir_objetos_para_json(datos_usuario), indent=4))
 
         except json.JSONDecodeError:
             print("❌ Error al decodificar JSON extraído:")
@@ -189,17 +198,27 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
         Agenda: {datos_usuario.get('agenda') or 'No proporcionado'}
     """.strip()
 
+    # --- Tiempo llamada qa_chain (API LLM) ---
+    start_llm_qa = time.perf_counter()
     respuesta = qa_chain.invoke({
         "question": query,
         "chat_history": chat_history,
         "user_data": resumen_usuario
     })
+    end_llm_qa = time.perf_counter()
+    print(f"⏱️ Tiempo qa_chain.invoke(): {(end_llm_qa - start_llm_qa)*1000:.2f} ms")
 
     if nueva_conversacion:
         saludo_inicial = "Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?"
         chat_history[-1] = (query, saludo_inicial)
+
+        # --- Tiempo guardar conversación MongoDB y archivo ---
+        start_db_save_conv = time.perf_counter()
         guardar_conversacion_mongo(chat_history, id_conversacion=id_conversacion)
         guardar_conversacion_archivo(chat_history, id_conversacion=id_conversacion)
+        end_db_save_conv = time.perf_counter()
+        print(f"⏱️ Tiempo guardar conversación MongoDB y archivo: {(end_db_save_conv - start_db_save_conv)*1000:.2f} ms")
+
         return {
             "respuesta": saludo_inicial,
             "id_conversacion": id_conversacion,
@@ -207,11 +226,17 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
         }
 
     chat_history[-1] = (query, respuesta["answer"])
+
+    # --- Tiempo guardar conversación MongoDB y archivo ---
+    start_db_save_conv = time.perf_counter()
     guardar_conversacion_mongo(chat_history, id_conversacion=id_conversacion)
     guardar_conversacion_archivo(chat_history, id_conversacion=id_conversacion)
+    end_db_save_conv = time.perf_counter()
+    print(f"⏱️ Tiempo guardar conversación MongoDB y archivo: {(end_db_save_conv - start_db_save_conv)*1000:.2f} ms")
 
     return {
         "respuesta": respuesta["answer"],
         "id_conversacion": id_conversacion,
         "nueva_conversacion": nueva_conversacion
     }
+
