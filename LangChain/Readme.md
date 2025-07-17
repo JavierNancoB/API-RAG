@@ -17,7 +17,6 @@ Este proyecto permite realizar preguntas sobre documentos cargados en una base v
 * [🧪 Funcionamiento](#-funcionamiento)
 * [📂 Estructura del Proyecto](#-estructura-del-proyecto)
 * [🧹 Cleaner: Limpieza de Conversaciones Inactivas](#-cleaner-limpieza-de-conversaciones-inactivas)
-* [🙋‍♂️ Contribuciones](#️-contribuciones)
 
 ## ⚙️ Requisitos Previos
 
@@ -34,14 +33,24 @@ Para más informacion respecto a la base de datos Vectorial visitar la [document
 
 Crea un archivo `.env` en la carpeta [LangChain](../LangChain/), en caso de dudas se encuentra el archivo [ejemplo.env](./ejemplo.env):
 
-```env
-GROQ_API_KEY=tu_clave_api_de_groq
-MONGO_URI=mongodb://localhost:27017/
-WEAVIATE_PORT=8080
-WEAVIATE_GRPC_PORT=50051
-```
+### Variables definidas en `.env`
 
-Puedes conseguir una clave en [https://console.groq.com](https://console.groq.com).
+| Variable             | Descripción                                        | Ejemplo                      |
+| -------------------- | -------------------------------------------------- | ---------------------------- |
+| `GROQ_API_KEY`       | Clave API para autenticar con el modelo Groq LLM   | `sk-abcdef1234567890`        |
+| `MONGO_URI`          | URI de conexión a la base MongoDB                  | `mongodb://localhost:27017/` |
+| `WEAVIATE_PORT`      | Puerto HTTP donde corre el servidor Weaviate local | `8080`                       |
+| `WEAVIATE_GRPC_PORT` | Puerto gRPC para comunicación con Weaviate         | `50051`                      |
+
+---
+
+### Cómo crear y usar tu archivo `.env`
+
+1. Copia el archivo de ejemplo `ejemplo.env` en la carpeta `LangChain/` y renómbralo a `.env`.
+2. Rellena cada variable con los valores correspondientes a tu entorno.
+3. El proyecto carga estas variables automáticamente al iniciar (usando `python-dotenv` o similar).
+4. NUNCA subair archivo `.env` a repositorios públicos.
+5. Puedes conseguir una clave en [https://console.groq.com](https://console.groq.com).
 
 ---
 
