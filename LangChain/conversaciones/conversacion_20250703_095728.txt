@@ -1,8 +1,0 @@
-Turno 1:
-Tú: hola
-Bot: ¡Hola! Soy un asistente de Alloxentric. Me alegra que hayas contactado con nosotros. Para poder ayudarte de manera efectiva, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
-
-Turno 2:
-Tú: mi nombre es javier nanco
-Bot: Hola, encantado de conocerte. Para poder ayudarte de manera efectiva, me gustaría saber un poco más sobre ti. ¿Podrías proporcionarme tu nombre y correo electrónico, por favor? En Alloxentric, nos enfocamos en brindar soluciones innovadoras para empresas como la tuya.
-

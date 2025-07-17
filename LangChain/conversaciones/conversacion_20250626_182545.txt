@@ -1,4 +1,0 @@
-Turno 1:
-Tú: Hola, quiero saber más sobre sus servicios.
-Bot: ¡Hola! Para poder brindarte información más personalizada sobre nuestros servicios, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
-

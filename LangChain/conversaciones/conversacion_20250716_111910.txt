@@ -1,8 +1,0 @@
-Turno 1:
-Tú: 
-Bot: Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?
-
-Turno 2:
-Tú: Soy Agustin, trabajo en una empresa de Ingenieria y quería saber si tienen experiencia y soluciones ne mi mercado.
-Bot: En Alloxentric tenemos amplia experiencia en el mercado de la ingeniería, nuestra plataforma de comunicaciones omnicanal es utilizada por diversas empresas para mejorar la calidad de la experiencia del cliente. Nuestras soluciones incluyen Analítica CX de Agentes, Chatbots y Voice Bots, que permiten evaluar y mejorar la calidad de las interacciones con los clientes. ¿Podrías proporcionarnos tu nombre y correo electrónico para poder continuar con la conversación?
-

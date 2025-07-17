@@ -1,4 +1,0 @@
-Turno 1:
-Tú: hola buen dia
-Bot: Buen día. Para poder ayudarte de manera personalizada, ¿podrías proporcionarme tu nombre y correo electrónico, por favor?
-

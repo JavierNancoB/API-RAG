@@ -1,4 +1,0 @@
-Turno 1:
-Tú: hola
-Bot: Hola. Para poder ayudarte de manera personalizada, me gustaría saber quién eres. ¿Podrías proporcionarme tu nombre y correo electrónico?
-
