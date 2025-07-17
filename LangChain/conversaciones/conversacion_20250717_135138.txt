@@ -1,0 +1,4 @@
+Turno 1:
+Tú: hola
+Bot: Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?
+
