@@ -16,7 +16,7 @@ Este proyecto permite realizar preguntas sobre documentos cargados en una base v
 * [📄 Descripción del Código](#-descripción-del-código)
 * [🧪 Funcionamiento](#-funcionamiento)
 * [📂 Estructura del Proyecto](#-estructura-del-proyecto)
-* [🧹 Cleaner: Limpieza de Conversaciones Inactivas](#🧹 Cleaner: Limpieza de Conversaciones Inactivas)
+* [🧹 Cleaner: Limpieza de Conversaciones Inactivas](#-cleaner-limpieza-de-conversaciones-inactivas)
 * [🙋‍♂️ Contribuciones](#️-contribuciones)
 
 ## ⚙️ Requisitos Previos
