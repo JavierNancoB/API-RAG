@@ -1,15 +1,30 @@
-from datetime import datetime
+"""
+Módulo principal para procesar chats utilizando una cadena de extracción y una cadena de QA
+basada en un modelo LLM, integrando almacenamiento en MongoDB y persistencia local.
+
+Este módulo realiza:
+- Inicialización perezosa de componentes (LLM, vector store, cliente Weaviate).
+- Extracción de información desde el historial de conversación mediante un LLM.
+- Fusión de datos extraídos con datos existentes del usuario.
+- Generación de respuestas a través de una cadena de QA.
+- Registro y persistencia del historial de conversación.
+
+Dependencias: chains, config, db, utils, llm, retriever, embeddings
+"""
+
 import json
+import re
+from datetime import datetime
+
+# Componentes internos del proyecto
 from chains.qa_chains import build_qa_chain
 from chains.extraction import build_extractor_chain
-from config.respuestas_salida import RESPUESTAS_SALIDA
 from utils.json import extraer_json_del_texto
 from db.mongo import (
     cargar_datos_usuario,
     guardar_usuario,
     cargar_conversacion,
     guardar_conversacion as guardar_conversacion_mongo,
-    mover_a_finalizadas,
     existe_conversacion_finalizada
 )
 from utils.guardar_chat import guardar_conversacion as guardar_conversacion_archivo
@@ -17,34 +32,50 @@ from retriever.weaviate_client import get_client
 from embeddings.embedding_model import CustomEmbedding
 from llm.groq_model import load_llm
 from retriever.vector_store import create_vectorstore
-import re
 
 
 def extraer_json_del_texto(texto):
-    # Buscar bloque JSON dentro de triples backticks
+    """
+    Intenta extraer un bloque JSON desde un texto, especialmente si está
+    encerrado en triple backticks.
+
+    Args:
+        texto (str): Texto de entrada posiblemente con contenido JSON.
+
+    Returns:
+        str | None: Cadena JSON si se encuentra, de lo contrario None.
+    """
     match = re.search(r"```(?:json)?\s*({.*?})\s*```", texto, re.DOTALL)
     if match:
         return match.group(1)
-    else:
-        # Si no encuentra, intenta buscar solo el primer bloque JSON simple
-        match = re.search(r"({.*})", texto, re.DOTALL)
-        if match:
-            return match.group(1)
+
+    match = re.search(r"({.*})", texto, re.DOTALL)
+    if match:
+        return match.group(1)
+
     return None
 
 
 def convertir_objetos_para_json(obj):
+    """
+    Convierte objetos especiales como ObjectId a formatos compatibles con JSON.
+
+    Args:
+        obj (Any): Objeto a convertir.
+
+    Returns:
+        Any: Objeto serializable en JSON.
+    """
     if isinstance(obj, dict):
         return {k: convertir_objetos_para_json(v) for k, v in obj.items()}
     elif isinstance(obj, list):
         return [convertir_objetos_para_json(i) for i in obj]
     elif 'ObjectId' in str(type(obj)):
         return str(obj)
-    else:
-        return obj
+    return obj
 
 
-# Variables globales inicializadas en None
+# Variables globales para componentes del sistema
 client = None
 embedding_model = None
 vectorstore = None
@@ -54,6 +85,14 @@ extractor_chain = None
 
 
 def inicializar_componentes():
+    """
+    Inicializa los componentes del sistema si no han sido inicializados previamente:
+    - Cliente Weaviate
+    - Modelo de embeddings
+    - Vector store
+    - Modelo LLM
+    - Cadenas de QA y extracción
+    """
     global client, embedding_model, vectorstore, llm, qa_chain, extractor_chain
     if client is None:
         client = get_client()
@@ -65,20 +104,31 @@ def inicializar_componentes():
 
 
 def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
-    inicializar_componentes()  # Asegura que todo esté listo antes de usar
+    """
+    Procesa una conversación con el usuario, integrando extracción de datos
+    desde el texto con LLM y generando una respuesta basada en contexto.
+
+    Args:
+        query (str): Pregunta o entrada del usuario.
+        chat_history (list[tuple[str, str]] | None): Historial de conversación.
+        id_conversacion (str | None): ID de conversación previa.
+
+    Returns:
+        dict: Diccionario con la respuesta generada, ID de conversación
+              y si fue una nueva conversación.
+    """
+    inicializar_componentes()
 
     nueva_conversacion = False
 
     if id_conversacion:
-        doc_finalizada = existe_conversacion_finalizada(id_conversacion)
-        if doc_finalizada:
+        if existe_conversacion_finalizada(id_conversacion):
             id_anterior = id_conversacion
             id_conversacion = datetime.now().strftime("conversacion_%Y%m%d_%H%M%S")
             chat_history = [("[Sistema]", f"Esta conversación continúa desde una cerrada: {id_anterior}")]
             nueva_conversacion = True
-        else:
-            if chat_history is None:
-                chat_history = cargar_conversacion(id_conversacion) or []
+        elif chat_history is None:
+            chat_history = cargar_conversacion(id_conversacion) or []
     else:
         id_conversacion = datetime.now().strftime("conversacion_%Y%m%d_%H%M%S")
         chat_history = []
@@ -91,7 +141,6 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
     print(resultado.content)
 
     json_str = extraer_json_del_texto(resultado.content)
-
     datos_usuario = cargar_datos_usuario(id_conversacion) or {}
 
     for campo in ["nombre", "empresa", "necesidad", "correo", "idioma", "agenda"]:
@@ -99,7 +148,6 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
             datos_usuario[campo] = None
 
     datos_usuario["id_conversacion"] = id_conversacion
-
 
     print("📦 Datos usuario cargados desde Mongo o por defecto:")
     print(json.dumps(convertir_objetos_para_json(datos_usuario), indent=4))
@@ -114,7 +162,6 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
             for key in datos_usuario:
                 if key != "id_conversacion":
                     valor_extraido = extraidos.get(key)
-                    # Actualiza solo si el valor extraído no es None ni cadena vacía y es distinto
                     if valor_extraido not in [None, ""] and datos_usuario.get(key) != valor_extraido:
                         datos_usuario[key] = valor_extraido
                         datos_actualizados = True
@@ -122,11 +169,9 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
             if datos_actualizados:
                 guardar_usuario(datos_usuario)
                 print("✅ Datos actualizados guardados en Mongo:")
-                print(json.dumps(convertir_objetos_para_json(datos_usuario), indent=4))
             else:
                 print("ℹ️ No hubo nuevos datos que guardar.")
 
-            print("📌 Datos usuario después de fusión con lo extraído:")
             print(json.dumps(convertir_objetos_para_json(datos_usuario), indent=4))
 
         except json.JSONDecodeError:
@@ -144,14 +189,12 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
         Agenda: {datos_usuario.get('agenda') or 'No proporcionado'}
     """.strip()
 
-
     respuesta = qa_chain.invoke({
         "question": query,
         "chat_history": chat_history,
         "user_data": resumen_usuario
     })
 
-    # Si la conversación es nueva, devolvemos un saludo inicial
     if nueva_conversacion:
         saludo_inicial = "Hola soy un asistente automatizado, me llamo Agustin, ¿en qué te puedo ayudar?"
         chat_history[-1] = (query, saludo_inicial)
@@ -164,7 +207,6 @@ def procesar_chat_simple(query, chat_history=None, id_conversacion=None):
         }
 
     chat_history[-1] = (query, respuesta["answer"])
-
     guardar_conversacion_mongo(chat_history, id_conversacion=id_conversacion)
     guardar_conversacion_archivo(chat_history, id_conversacion=id_conversacion)
 

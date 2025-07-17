@@ -8,9 +8,9 @@ La principal funcionalidad del chatbot es ofrecer asistencia en tiempo real, res
 
 ### Integrantes del Proyecto
 
+* **Javier Alonso Nanco Becerra**
 * **Aranza Sue Díaz Tobar**
 * **Nicolás Armando Pozo Villagrán**
-* **Javier Alonso Nanco Becerra**
 * **Josefa Isadora González Rocha**
 
 ## 🛠️ Estructura del Proyecto
@@ -33,8 +33,6 @@ El chatbot interactúa con el usuario a través de un ciclo de preguntas y respu
 * La información de Alloxentric se encuentra en una base de datos Vectorial.
 * Constantemente se ofrece la posibilidad de agendar una cita. Al momento de solicitarla se le pide al usuario información para realizar el agendamiento (nombre, teléfono, correo).
 * Guarda la información de la conversación y los datos del usuario en la base de datos MongoDB.
-
-# 📥 Instalación
 
 ## 📦 Instalación de Weaviate
 
@@ -72,7 +70,7 @@ Para que Weaviate funcione correctamente, es necesario tener Docker corriendo en
 
 > **Nota**: Asegúrate de tener configurado Docker Desktop en modo `Windows Subsystem for Linux (WSL2)` si usas Windows para evitar problemas de compatibilidad y ademas que al momento de correr el comando te encuentres en la carpeta [weaviate_local](./weaviate_local/).
 
-### Documentación Detallada
+### Documentación Detallada de Weaviate
 
 Para más detalles sobre cómo configurar y usar Weaviate, consulta el [README más detallado aquí](./weaviate_local/Readme.md).
 
@@ -92,7 +90,7 @@ Para usar LangChain con el modelo Groq, primero necesitas obtener una **API Key*
    * Crea un archivo `.env` en el directorio [LangChain](./LangChain/).
    * Añade la siguiente línea al archivo `.env`, reemplazando `YOUR_API_KEY` con la clave que obtuviste de Groq:
 
-   ```
+   ```bash
    GROQ_API_KEY=YOUR_API_KEY
    ```
 
@@ -110,7 +108,7 @@ Para instalar las dependencias, simplemente ejecuta el siguiente comando en tu t
 
    Esto instalará **LangChain**, **Weaviate Client** y **OpenAI**, junto con cualquier otra librería necesaria que esté listada en el archivo `requirements.txt`.
 
-### Documentación Detallada
+### Documentación Detallada de LangChain
 
 Para más detalles sobre cómo configurar y usar el chatbot, consulta el [README más detallado aquí](./LangChain/Readme.md).
 
@@ -129,9 +127,9 @@ Para que tu proyecto funcione correctamente con MongoDB, necesitas instalar y co
 
 En caso de no tener acceso a una base de datos no relacional se puede correr de manera local:
 
-   * Sigue las instrucciones de instalación para tu sistema operativo. Asegúrate de seleccionar la opción para instalar MongoDB como un servicio, lo que te permitirá ejecutar MongoDB en segundo plano sin tener que iniciar el servidor manualmente cada vez.
-   * Para **Windows**, asegúrate de agregar MongoDB al **PATH** durante la instalación para facilitar su ejecución desde la línea de comandos.
-   * Para **macOS y Linux**, la instalación puede realizarse a través de **Homebrew** (macOS) o con el paquete `.tar.gz` o `.deb` disponible en la página de descargas.
+* Sigue las instrucciones de instalación para tu sistema operativo. Asegúrate de seleccionar la opción para instalar MongoDB como un servicio, lo que te permitirá ejecutar MongoDB en segundo plano sin tener que iniciar el servidor manualmente cada vez.
+* Para **Windows**, asegúrate de agregar MongoDB al **PATH** durante la instalación para facilitar su ejecución desde la línea de comandos.
+* Para **macOS y Linux**, la instalación puede realizarse a través de **Homebrew** (macOS) o con el paquete `.tar.gz` o `.deb` disponible en la página de descargas.
 
 ### Paso 2: Iniciar MongoDB
 
@@ -158,7 +156,6 @@ Una vez que MongoDB esté instalado en tu máquina, debes iniciar el servidor de
   ```
 
   Esto también iniciará el servidor en el puerto predeterminado `27017`.
-
 
 ### Comando de Salida
 

@@ -1,8 +1,39 @@
+"""
+Módulo para construir la cadena de preguntas y respuestas (QA) basada en
+un modelo LLM y un sistema de recuperación de documentos (retriever)
+usando LangChain.
+"""
+
 from langchain.prompts import PromptTemplate
 from langchain.chains import ConversationalRetrievalChain
 
 def build_qa_chain(llm, retriever):
-    qa_prompt_template = qa_prompt_template = """
+    """
+    Construye una cadena de ConversationalRetrievalChain que responde
+    preguntas del usuario con contexto, siguiendo un prompt específico.
+
+    Args:
+        llm: Instancia del modelo de lenguaje (Large Language Model).
+        retriever: Objeto responsable de recuperar documentos relevantes para el contexto.
+
+    Returns:
+        ConversationalRetrievalChain: Cadena que procesa preguntas con contexto y
+        responde de forma profesional y directa según las reglas del prompt.
+
+    Detalles del prompt:
+        - El asistente es profesional y directo, representando la empresa Alloxentric.
+        - Responde en el idioma del usuario.
+        - Respuestas claras, precisas y breves (no más de 12 líneas).
+        - No explica el proceso ni reformula preguntas.
+        - Solicita datos del usuario (nombre, correo, empresa, necesidad, agenda) de forma amable si no están.
+        - Controla el flujo de conversación para recolectar información de usuario.
+        - No repite saludos innecesarios.
+        - Usa el contexto de documentos relevantes para responder.
+
+    Uso:
+        La cadena puede ser invocada con inputs: question, user_data y context.
+    """
+    qa_prompt_template = """
         Eres un asistente profesional y directo de la empresa Alloxentric (siempre habla de nosotros).
 
         Tu único trabajo es brindar información útil, clara y precisa al usuario (No más de 12 lineas), sin explicar tu proceso de pensamiento, sin reformular sus preguntas, y sin dar clases.
