@@ -1,204 +1,85 @@
-Perfecto. Vamos paso por paso explicando la **necesidad** de esta sección y el **por qué** se hace así.
+# 🐳 Uso local con Docker Compose
+
+Este proyecto utiliza **Docker Desktop** para levantar un entorno local con **Weaviate**, una base de datos vectorial que almacena y permite hacer búsquedas semánticas de contenido procesado.
+
+El entorno se compone de dos servicios:
+
+* `weaviate`: la base de datos vectorial.
+* `loader` *(opcional)*: servicio encargado de cargar datos en Weaviate.
+
+> ⚠️ **Requisitos**: tener instalado [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ---
 
-## 🔗 ¿Por qué es necesaria la conexión a una instancia de Weaviate?
-
-Weaviate es un motor de base de datos vectorial. Para poder **guardar, consultar o indexar** datos con inteligencia artificial (como embeddings), **necesitamos conectarnos a una instancia activa de Weaviate**, ya sea en la nube o en local.
-
-Sin esa conexión, el cliente de Python no sabrá **a qué servidor enviar las peticiones** (como insertar un vector, buscar similares, etc.).
-
----
-
-## 🚀 Explicación de la Conexión (Opción A: Weaviate Cloud)
-
-### 1. Crear la instancia en la nube
-
-* Weaviate Cloud ofrece un entorno **listo para usar**, sin que tengas que instalar nada en tu máquina.
-* Cuando la creas, obtienes:
-
-  * Una URL (como `https://miinstancia.weaviate.network`)
-  * Una **API Key** que protege tu acceso.
-
-### 2. Guardar credenciales como variables de entorno
+## 📁 1. Navegar al directorio del entorno
 
 ```bash
-export WEAVIATE_URL="https://tu-instancia.weaviate.network"
-export WEAVIATE_API_KEY="tu_clave_api"
+cd weaviate_local
 ```
 
-* Esto es una **buena práctica de seguridad**, ya que evita dejar tus credenciales visibles en el código fuente.
-* Usar variables de entorno permite que el mismo script funcione en diferentes entornos sin modificaciones.
+---
 
-### 3. Conectar desde Python
+## 🚀 2. Levantar el stack
+
+1. **Levantar Weaviate:**
+
+```bash
+docker-compose -f docker-compose-weaviate.yml up --build -d
+```
+
+1. **Levantar el loader (si aplica):**
+
+```bash
+docker-compose -f docker-compose-loader.yml up --build -d
+```
+
+---
+
+## 🔌 3. Conexión desde LangChain
+
+Dentro de la aplicación principal en Python, la conexión a Weaviate se realiza a través del cliente oficial y del módulo `langchain_weaviate`.
+
+Ejemplo:
 
 ```python
+from langchain_weaviate import WeaviateVectorStore
 import weaviate
-from weaviate.classes.init import Auth
-import os
 
-client = weaviate.connect_to_weaviate_cloud(
-    cluster_url=os.environ["WEAVIATE_URL"],
-    auth_credentials=Auth.api_key(os.environ["WEAVIATE_API_KEY"]),
+client = weaviate.connect_to_local(port=8080, grpc_port=50051)
+
+vectorstore = WeaviateVectorStore(
+    client=client,
+    index_name="PdfPage",
+    text_key="content",
+    embedding=mi_embedding
 )
 ```
 
-* `connect_to_weaviate_cloud` es una función que se encarga de manejar la autenticación con la API key.
-* Se conecta usando los valores definidos en las variables de entorno.
+Esto permite almacenar y consultar vectores desde LangChain directamente sobre Weaviate.
 
-### 4. Verificación
-
-```python
-print(client.is_ready())  # True si la conexión fue exitosa
-```
-
-* Esta línea **verifica que tu cliente está conectado** y listo para enviar consultas a tu instancia.
+> Las funciones como `conectar_weaviate()` y `get_client()` están disponibles en los módulos auxiliares del proyecto para facilitar esta conexión.
 
 ---
 
-## 🐳 ¿Y si quiero trabajar localmente (Opción B)?
+## ❗ Problemas conocidos
 
-Puedes instalar Weaviate usando Docker. En ese caso:
+Si Weaviate queda atascado intentando conectarse a otros nodos o no responde en `http://localhost:8080`, puede deberse a un estado inconsistente del volumen persistente.
 
-* No necesitas una API key.
-* Usas una URL como `http://localhost:8080`.
-
-La conexión sería diferente, algo así:
-
-```python
-client = weaviate.connect_to_local()
-```
-
----
-
-## 🧠 Conclusión
-
-Conectarse correctamente a una instancia (local o nube) es el **primer paso esencial** para poder:
-
-* Subir documentos,
-* Generar embeddings,
-* Hacer búsquedas semánticas,
-* O trabajar con RAG (Retrieval-Augmented Generation).
-
-¿Quieres que te ayude a hacer esta conexión con tus propios datos o probar con una demo?
-
-
-
-Perfecto, si estás trabajando desde Jupyter y quieres usar **Weaviate localmente con Docker**, te explico el paso a paso **bien detallado**, sin asumir conocimientos avanzados de Docker.
-
----
-
-## 🐳 Paso a Paso: Instalar y Ejecutar Weaviate Localmente con Docker (desde Jupyter)
-
-### ✅ Requisitos
-
-Antes de comenzar, asegúrate de tener:
-
-1. **Docker Desktop instalado**
-
-   * [Descargar Docker](https://www.docker.com/products/docker-desktop/)
-   * Verifica que funciona con:
-
-     ```bash
-     docker --version
-     ```
-
-2. **`docker-compose` instalado** (ya viene con Docker Desktop normalmente)
-
-3. **Permisos de administrador** en tu PC (para ejecutar Docker correctamente)
-
----
-
-
-
-### 📄 Paso 2: Crea un archivo `docker-compose.yml`
-
-Este archivo define los servicios que Docker debe levantar. Cópialo dentro de `weaviate_local/docker-compose.yml`.
-
-```yaml
-version: '3.4'
-
-services:
-  weaviate:
-    image: semitechnologies/weaviate:latest
-    ports:
-      - "8080:8080"
-      - "50051:50051"
-    environment:
-      QUERY_DEFAULTS_LIMIT: '25'
-      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
-      PERSISTENCE_DATA_PATH: './data'
-      DEFAULT_VECTORIZER_MODULE: 'none'
-      ENABLE_MODULES: ''
-    volumes:
-      - weaviate_data:/var/lib/weaviate
-
-volumes:
-  weaviate_data:
-```
-
-📌 **Notas importantes**:
-
-* `8080` es el puerto de la API REST de Weaviate.
-* `AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'` te permite conectarte sin clave.
-* No usamos vectores automáticos (por ahora), así que `DEFAULT_VECTORIZER_MODULE` está en `'none'`.
-
----
-
-### ▶️ Paso 3: Levanta el servidor
-
-En la terminal (fuera de Jupyter):
+Solución:
 
 ```bash
-docker-compose up -d
+docker volume rm weaviate_local_weaviate_data
 ```
 
-Esto descargará e iniciará Weaviate en segundo plano.
+Luego, vuelve a levantar el stack como se explicó arriba.
 
-Verifica que esté corriendo:
+---
+
+## 🧹 4. Detener y limpiar todo
+
+Para detener y borrar todos los contenedores y volúmenes:
 
 ```bash
-docker ps
+docker-compose -f docker-compose-weaviate.yml down -v
+docker-compose -f docker-compose-loader.yml down -v
 ```
-
-Deberías ver un contenedor `weaviate_weaviate_1` o similar, escuchando en el puerto 8080.
-
----
-
-### 🧪 Paso 4: Prueba conexión desde Jupyter
-
-Ahora desde tu Jupyter Notebook:
-
-```python
-import weaviate
-
-client = weaviate.connect_to_local()
-
-print("¿Weaviate está listo?:", client.is_ready())
-```
-
-Esto debería devolver:
-
-```
-¿Weaviate está listo?: True
-```
-
----
-
-### 🧹 Paso 5: Apagar el contenedor (cuando termines)
-
-Cuando quieras detener Weaviate:
-
-```bash
-docker-compose down
-```
-
----
-
-### ❓¿Y si quiero usar un vectorizer como OpenAI, Cohere, etc.?
-
-Eso se puede hacer activando módulos como `text2vec-openai` o `text2vec-cohere`, pero requiere claves API y otro nivel de configuración. Te puedo ayudar con eso más adelante.
-
----
-
-¿Quieres que te prepare un Notebook ejemplo para comenzar a indexar datos o prefieres dejar solo esto funcionando por ahora?
