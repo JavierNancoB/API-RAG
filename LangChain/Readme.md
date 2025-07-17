@@ -15,8 +15,8 @@ Este proyecto permite realizar preguntas sobre documentos cargados en una base v
 * [📦 Instalación de Dependencias](#-instalación-de-dependencias)
 * [📄 Descripción del Código](#-descripción-del-código)
 * [🧪 Funcionamiento](#-funcionamiento)
-* [📂 Estructura del Proyecto](#📁-estructura-del-desarrollo)
-* [📝 Licencia](#-licencia)
+* [📂 Estructura del Proyecto](#-estructura-del-proyecto)
+* [🧹 Cleaner: Limpieza de Conversaciones Inactivas](#🧹 Cleaner: Limpieza de Conversaciones Inactivas)
 * [🙋‍♂️ Contribuciones](#️-contribuciones)
 
 ## ⚙️ Requisitos Previos
@@ -119,3 +119,67 @@ API_RAG/
 ```
 
 El archivo principal para levantar la API es main.py dentro de LangChain/, y Weaviate debe estar corriendo en Docker.
+
+## 🧹 Cleaner: Limpieza de Conversaciones Inactivas
+
+El script `cleaner.py` se encarga de **mover automáticamente las conversaciones inactivas** (que no han sido modificadas en los últimos 30 minutos) desde la colección principal a una colección de respaldo (`finalizadas`) en MongoDB.
+
+Esto permite mantener la base de datos liviana, mejorar el rendimiento del sistema y facilitar la escalabilidad a largo plazo.
+
+---
+
+## ⚙️ Ejecución Manual
+
+Puedes ejecutar el script de forma manual con:
+
+```bash
+python cleaner.py
+```
+
+---
+
+## 🕒 Automatización en Producción
+
+### 🐧 Linux (con `cron`)
+
+`cron` es el método más común y confiable para programar tareas en entornos Linux.
+
+1. Abre el archivo `crontab` del usuario actual:
+
+   ```bash
+   crontab -e
+   ```
+
+2. Agrega la siguiente línea para ejecutar el script cada 30 minutos:
+
+   ```bash
+   */30 * * * * /ruta/a/tu/entorno/.venv/bin/python /ruta/completa/a/LangChain/cleaner.py
+   ```
+
+   > Asegúrate de:
+   >
+   > * Usar rutas absolutas tanto para el intérprete Python como para el archivo.
+   > * Que el entorno virtual esté activado correctamente si lo usas.
+   > * Dar permisos de ejecución si es necesario.
+
+---
+
+### 🪟 Windows (con el Programador de tareas)
+
+Windows no tiene `cron`, pero puedes usar el **Programador de tareas** de forma equivalente.
+
+1. Abre el **Programador de tareas**.
+2. Crea una nueva **tarea básica**:
+
+   * **Nombre:** `Cleaner LangChain`
+   * **Desencadenador:** Cada 30 minutos
+   * **Acción:** Iniciar un programa
+
+     * **Programa/script:** `python` (o la ruta completa: `C:\Ruta\a\Python\python.exe`)
+     * **Argumentos:** `C:\Ruta\al\proyecto\LangChain\cleaner.py`
+3. Guarda y activa la tarea.
+
+> Asegúrate de que:
+>
+> * Python está correctamente instalado y en el `PATH`, o usa la ruta completa.
+> * El script se ejecuta correctamente desde PowerShell o CMD con el mismo comando.
