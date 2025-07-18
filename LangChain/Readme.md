@@ -192,3 +192,48 @@ Windows no tiene `cron`, pero puedes usar el **Programador de tareas** de forma 
 >
 > * Python está correctamente instalado y en el `PATH`, o usa la ruta completa.
 > * El script se ejecuta correctamente desde PowerShell o CMD con el mismo comando.
+
+## 📍 Instalación de MongoDB de manera local (Opcional)
+
+Para que tu proyecto funcione correctamente con MongoDB, necesitas instalar y configurar MongoDB de manera local en tu máquina. Sigue estos pasos para instalar MongoDB en tu entorno local.
+
+### Paso 1: Descargar e Instalar MongoDB
+
+1. **Descargar MongoDB**:
+
+   * Dirígete a la página oficial de descargas de MongoDB: [MongoDB Download Center](https://www.mongodb.com/try/download/community).
+   * Selecciona la versión más reciente de **MongoDB Community Server** para tu sistema operativo (Windows, macOS o Linux) y descarga el instalador correspondiente.
+
+2. **Instalar MongoDB**:
+
+En caso de no tener acceso a una base de datos no relacional se puede correr de manera local:
+
+* Sigue las instrucciones de instalación para tu sistema operativo. Asegúrate de seleccionar la opción para instalar MongoDB como un servicio, lo que te permitirá ejecutar MongoDB en segundo plano sin tener que iniciar el servidor manualmente cada vez.
+* Para **Windows**, asegúrate de agregar MongoDB al **PATH** durante la instalación para facilitar su ejecución desde la línea de comandos.
+* Para **macOS y Linux**, la instalación puede realizarse a través de **Homebrew** (macOS) o con el paquete `.tar.gz` o `.deb` disponible en la página de descargas.
+
+### Paso 2: Iniciar MongoDB
+
+Una vez que MongoDB esté instalado en tu máquina, debes iniciar el servidor de MongoDB para que esté listo para recibir conexiones.
+
+* **En Windows**, abre una terminal (CMD o PowerShell) y ejecuta:
+
+  ```bash
+  mongod
+  ```
+
+  Esto iniciará el servidor de MongoDB en el puerto predeterminado `27017`.
+
+* **En macOS/Linux**, si usas **Homebrew** en macOS, puedes iniciar MongoDB con:
+
+  ```bash
+  brew services start mongodb-community@5.0
+  ```
+
+  O simplemente ejecutando:
+
+  ```bash
+  mongod
+  ```
+
+  Esto también iniciará el servidor en el puerto predeterminado `27017`.
